@@ -5,8 +5,8 @@ can add additional members as needed but I only want to do a 'info zthreads'
 to show that the extension would actually work in a full SDM environment.
 
 * if not aready done create a symlink to the gdb extension directory
-* * ln -s ${HOME}/workspaces/gdb-zos-disassembler-plugin/gdb /opt/lzlabs/debug/gdb
+ * ln -s ${HOME}/workspaces/gdb-zos-disassembler-plugin/gdb /opt/lzlabs/debug/gdb
 * compile the test.c code
-* * clang -o tsdm -g test.c
+ * clang -o tsdm -g test.c
 * execute the gdb debugging script
-* * gdb -ex test.gdb -r "tsdm"
+ * gdb -ex test.gdb -r "tsdm"
