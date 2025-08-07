@@ -21,10 +21,10 @@ def isSDMEnabled( ):
       otherwise the address of the variable will be returned.
    """
    
-   sb = gdb.parse_and_eval( "sysblk" )
-   
-   if sb == 0x0:
-      raise gdb.GdbError(  "An SDM environment has not yet been initiated." )
+   try:
+      sb = gdb.parse_and_eval( "sysblk" )
+   except Exception:
+      raise gdb.GdbError( "An SDM environment has not yet been initiated (sysblk not found)." )
    
    #return( int( str( sb ), 16 ) )
    return sb
