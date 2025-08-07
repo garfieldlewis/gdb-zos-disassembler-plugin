@@ -4,8 +4,8 @@ The structure for our purposes will have only a max_cpu_threads member. We
 can add additional members as needed but I only want to do a 'info zthreads'
 to show that the extension would actually work in a full SDM environment.
 
-* if not aready done create a symlink to the gdb extension directory
-  * ln -s ${HOME}/workspaces/gdb-zos-disassembler-plugin/gdb /opt/lzlabs/debug/gdb
+* if not already done create a symlink to the gdb extension directory (Note: TARGET_HOME directory must be the directory where you cloned the repository)
+  * ln -s <TARGET_HOME>/gdb-zos-disassembler-plugin/gdb /opt/lzlabs/debug/gdb
 * compile the test.c code
   * clang -o tsdm -g test.c
 * execute the gdb debugging script
